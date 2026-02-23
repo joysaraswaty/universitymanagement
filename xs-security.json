@@ -1,0 +1,8 @@
+{
+  "scopes": [],
+  "attributes": [],
+  "role-templates": [],
+  "xsappname": "universitymanagement",
+  "tenant-mode": "dedicated",
+  "authorities-inheritance": false
+}

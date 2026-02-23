@@ -1,0 +1,32 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Feb 23 2026 20:56:48 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "Local CAP",
+    "metadataFilename": "",
+    "serviceUrl": "http://localhost:4004/service/UniversityApp/",
+    "appName": "studentmanagement",
+    "appTitle": "University Student App",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "university.school",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.145.0",
+    "enableEslint": false,
+    "enableTypeScript": true,
+    "showMockDataInfo": false,
+    "generatorVersion": "1.20.3",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Student"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "schools"
+      }
+    ],
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/university.school.studentmanagement/index.html"
+  }
+}
