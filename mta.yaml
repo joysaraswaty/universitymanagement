@@ -100,7 +100,6 @@ modules:
     build-parameters:
       no-source: true
 
-
   # =========================
   # HTML5 CONTENT DEPLOYER
   # =========================
@@ -137,13 +136,15 @@ modules:
   #           - universityschoolstudentmanagement.zip
   #         name: universityschoolstudentmanagement
   #         target-path: app/
-          
+
   # =========================
   # HTML5 UI MODULE
   # =========================
   - name: universityschoolstudentmanagement
     type: html5
     path: app/studentmanagement
+    properties:
+      sap.cloud.service: universitymanagement   # 👈 ADD THIS
     build-parameters:
       build-result: dist
       builder: custom
@@ -155,7 +156,6 @@ modules:
       supported-platforms:
         []
 
-        
 resources:
 
   - name: universitymanagement-auth
@@ -176,7 +176,6 @@ resources:
     requires:
       - name: app-api
 
-
   - name: universitymanagement-db
     type: com.sap.xs.hdi-container
     parameters:
@@ -188,7 +187,6 @@ resources:
     parameters:
       service: connectivity
       service-plan: lite
-
 
   # # METADATA
   # - type: org.cloudfoundry.user-provided-service
@@ -217,20 +215,17 @@ resources:
       service: destination
       service-plan: lite
 
-
   - name: universitymanagement-html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
       service-plan: app-host
 
-
   - name: universitymanagement-html5-runtime
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
       service-plan: app-runtime
-
 
 parameters:
   deploy_mode: html5-repo

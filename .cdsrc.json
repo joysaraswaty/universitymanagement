@@ -1,0 +1,14 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "joyprasanna.saraswaty@tcs.com": {
+            "roles": ["universityAdmin", "universityViewer"]
+          }
+        }
+      }
+    }
+  }
+}

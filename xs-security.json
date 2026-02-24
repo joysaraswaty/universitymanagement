@@ -1,7 +1,31 @@
 {
-  "scopes": [],
+  "scopes": [
+     {
+          "name": "$XSAPPNAME.UNViewer",
+            "description": "Viewer"
+     },
+     {
+            "name": "$XSAPPNAME.UNAdmin",
+            "description": "Administrator"
+     }
+  ],
   "attributes": [],
-  "role-templates": [],
+  "role-templates": [
+      {
+        "name": "universityViewer",
+        "description": "Viewer Role",
+        "scope-references": [
+                "$XSAPPNAME.UNViewer"
+            ]
+      },
+    {
+        "name": "universityAdmin",
+        "description": "Admin Role",
+        "scope-references": [
+                "$XSAPPNAME.UNAdmin"
+          ]
+    }
+  ],
   "xsappname": "universitymanagement",
   "tenant-mode": "dedicated",
   "authorities-inheritance": false
