@@ -1,3 +1,3 @@
 code,name,descr
-REG;Regular;Regular classroom course
-COR;Correspondence;Distance learning course
+REG,Regular,Regular classroom course
+COR,Correspondence,Distance learning course
