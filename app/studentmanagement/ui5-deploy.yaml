@@ -12,13 +12,14 @@ builder:
         debug: true
         transformModulesToUI5:
           overridesToOverride: true
+          
     - name: ui5-task-zipper
       afterTask: generateCachebusterInfo
       configuration:
         archiveName: universityschoolstudentmanagement
         relativePaths: true
-        additionalFiles:
-          - xs-app.json
+        # additionalFiles:
+        #   - xs-app.json
   resources:
     excludes:
       - /test/**
