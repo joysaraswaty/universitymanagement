@@ -3,9 +3,9 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/?odata/(.*)$",
-      "target": "/odata/$1",
-      "destination": "srv-api",
+      "source": "^/service/(.*)$",
+      "target": "/service/$1",
+      "destination": "universitymanagement-UniversityApp",
       "authenticationType": "xsuaa",
       "csrfProtection": true
     },

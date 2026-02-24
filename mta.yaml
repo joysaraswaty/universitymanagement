@@ -41,28 +41,28 @@ modules:
   # =========================
   # APP ROUTER (PRODUCTION)
   # =========================
-  - name: universitymanagement
-    type: approuter.nodejs
-    path: app/router
-    requires:
-      - name: srv-api
-        group: destinations
-        properties:
-          forwardAuthToken: true
-          name: srv-api
-          url: ~{srv-url}
-      - name: universitymanagement-auth
-      - name: universitymanagement-destination
-      - name: universitymanagement-html5-runtime
-    provides:
-      - name: app-api
-        properties:
-          app-protocol: ${protocol}
-          app-uri: ${default-uri}
-    parameters:
-      disk-quota: 256M
-      keep-existing-routes: true
-      memory: 128M
+  # - name: universitymanagement
+  #   type: approuter.nodejs
+  #   path: app/router
+  #   requires:
+  #     - name: srv-api
+  #       group: destinations
+  #       properties:
+  #         forwardAuthToken: true
+  #         name: srv-api
+  #         url: ~{srv-url}
+  #     - name: universitymanagement-auth
+  #     - name: universitymanagement-destination
+  #     - name: universitymanagement-html5-runtime
+  #   provides:
+  #     - name: app-api
+  #       properties:
+  #         app-protocol: ${protocol}
+  #         app-uri: ${default-uri}
+  #   parameters:
+  #     disk-quota: 256M
+  #     keep-existing-routes: true
+  #     memory: 128M
 
   # =========================
   # DESTINATION CONTENT (CRITICAL FOR WORK ZONE)
@@ -81,6 +81,7 @@ modules:
         parameters:
           service-key:
             name: universitymanagement_uaa_key
+      - name: srv-api
     parameters:
       content:
         # instance:
@@ -185,14 +186,17 @@ resources:
             - binding-secret
             - x509
           redirect-uris:
-            - https://*~{app-api/app-uri}/**
+            # - https://*~{app-api/app-uri}/**
+            - https://*.cfapps.*.hana.ondemand.com/**
+            - https://*.launchpad.cfapps.*.hana.ondemand.com/**
+            # - https://*.hana.ondemand.com/**
         tenant-mode: dedicated
         xsappname: universitymanagement-${org}-${space}
       path: ./xs-security.json
       service: xsuaa
       service-plan: application
-    requires:
-      - name: app-api
+    # requires:
+    #   - name: app-api
 
   - name: universitymanagement-db
     type: com.sap.xs.hdi-container
