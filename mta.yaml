@@ -83,7 +83,8 @@ modules:
             name: universitymanagement_uaa_key
     parameters:
       content:
-        instance:
+        # instance:
+        subaccount:
           destinations:
             - Name: universitymanagement_html5_repo_host
               ServiceInstanceName: universitymanagement-html5-repo-host
@@ -95,7 +96,7 @@ modules:
               ServiceInstanceName: universitymanagement-auth
               ServiceKeyName: universitymanagement_uaa_key
               sap.cloud.service: universitymanagement
-        existing_destinations_policy: update
+          existing_destinations_policy: update
     build-parameters:
       no-source: true
 
