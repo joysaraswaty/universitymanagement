@@ -99,13 +99,13 @@ modules:
               ServiceKeyName: universitymanagement_uaa_key
               sap.cloud.service: universitymanagement
   
-            # CAP root service
-            - Authentication: OAuth2UserTokenExchange
-              Name: universitymanagement-app-srv
-              TokenServiceInstanceName: universitymanagement-auth
-              TokenServiceKeyName: universitymanagement_uaa_key
-              URL: ~{srv-api/srv-url}
-              sap.cloud.service: universitymanagement
+            # # CAP root service
+            # - Authentication: OAuth2UserTokenExchange
+            #   Name: universitymanagement-app-srv
+            #   TokenServiceInstanceName: universitymanagement-auth
+            #   TokenServiceKeyName: universitymanagement_uaa_key
+            #   URL: ~{srv-api/srv-url}
+            #   sap.cloud.service: universitymanagement
 
             # REQUIRED: UI5 app calls /service/UniversityApp
             - Authentication: OAuth2UserTokenExchange
