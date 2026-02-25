@@ -92,6 +92,7 @@ modules:
               ServiceInstanceName: universitymanagement-html5-repo-host
               ServiceKeyName: universitymanagement_html5_repo_host_key
               sap.cloud.service: universitymanagement
+              HTML5.DynamicDestination: true
 
             - Name: universitymanagement_uaa
               Authentication: OAuth2UserTokenExchange
