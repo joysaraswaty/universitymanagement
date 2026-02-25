@@ -114,6 +114,7 @@ modules:
               TokenServiceKeyName: universitymanagement_uaa_key
               URL: ~{srv-api/srv-url}/service/UniversityApp
               sap.cloud.service: universitymanagement
+              HTML5.DynamicDestination: true
             
           existing_destinations_policy: update
     build-parameters:
