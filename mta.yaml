@@ -97,7 +97,7 @@ modules:
               Authentication: OAuth2UserTokenExchange
               ServiceInstanceName: universitymanagement-auth
               ServiceKeyName: universitymanagement_uaa_key
-              sap.cloud.service: universitymanagement
+              # sap.cloud.service: universitymanagement
   
             # # CAP root service
             # - Authentication: OAuth2UserTokenExchange
