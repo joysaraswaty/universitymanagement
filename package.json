@@ -25,17 +25,15 @@
   },
   "private": true,
   "cds": {
-    "requires": {
-      
-      "db": "hana",
-      
-       "[production]": {
-      "auth": "xsuaa"
-    },
-
-    "[hybrid]": {
-      "auth": "mocked"
-    },
+    "requires": {    
+      "[production]": {
+        "auth": "xsuaa",
+        "db": "hana"
+      },
+      "[hybrid]": {
+      "auth": "mocked",
+      "db": "hana"
+      },
 
       "connectivity": true,
       "destinations": true,
