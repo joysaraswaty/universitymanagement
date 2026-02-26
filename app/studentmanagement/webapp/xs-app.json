@@ -7,7 +7,7 @@
       "target": "/service/$1",
       "destination": "universitymanagement-UniversityApp",
       "authenticationType": "xsuaa",
-      "csrfProtection": true
+      "csrfProtection": false
     },
     {
       "source": "^(.*)$",
