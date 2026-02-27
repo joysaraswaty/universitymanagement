@@ -3,8 +3,8 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/service/(.*)$",
-      "target": "/service/$1",
+      "source": "^(.*)/service/(.*)$",
+      "target": "/service/$2",
       "destination": "universitymanagement-UniversityApp",
       "authenticationType": "xsuaa",
       "csrfProtection": false
