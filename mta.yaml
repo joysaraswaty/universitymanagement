@@ -113,7 +113,7 @@ modules:
               Name: universitymanagement-UniversityApp
               TokenServiceInstanceName: universitymanagement-auth
               TokenServiceKeyName: universitymanagement_uaa_key
-              URL: ~{srv-api/srv-url}/service/UniversityApp
+              URL: ~{srv-api/srv-url}
               sap.cloud.service: universitymanagement
               HTML5.DynamicDestination: true
             
