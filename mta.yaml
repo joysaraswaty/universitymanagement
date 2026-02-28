@@ -36,6 +36,8 @@ modules:
     requires:
       - name: universitymanagement-db
     parameters:
+      memory: 512M
+      disk-quota: 1G
       buildpack: nodejs_buildpack
 
   # =========================
