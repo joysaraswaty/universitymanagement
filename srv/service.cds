@@ -6,6 +6,26 @@ service UniversitySrv @(path: '/service/UniversityApp')
 {
   @Capabilities : { Insertable,Updatable,Deletable, }
   @odata.draft.enabled
-  entity School as projection on un.School;
-  entity Student as projection on un.Student;
+  entity School @(restrict:[
+        {
+            grant: ['READ'],
+            to: 'universityViewer',
+        },
+        {
+            grant: ['WRITE'],
+            to: 'universityAdmin'
+        }
+    ])    
+  as projection on un.School;
+  entity Student @(restrict:[
+        {
+            grant: ['READ'],
+            to: 'universityViewer',
+        },
+        {
+            grant: ['WRITE'],
+            to: 'universityAdmin'
+        }
+    ])    
+  as projection on un.Student;
 }
